@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Nex d.o.o.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body {
+            font-family:'Roboto', sans-serif;
+            background: url('placeholder-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        body::before {
+            content:'';
+            position:fixed;top:0;left:0;width:100%;height:100%;
+            background: rgba(0,0,0,0.7);
+            z-index:-1;
+        }
+        header {text-align:center;padding:2rem 1rem;background-color:rgba(0,0,0,0.6);}
+        header h1 {font-size:2.5rem;margin-bottom:0.5rem;}
+        header p {font-size:1.1rem;color:#ccc;}
+        nav {display:flex;justify-content:center;gap:2rem;padding:1rem;background-color:rgba(0,0,0,0.6);flex-wrap:wrap;}
+        nav a {color:#f0f0f0;text-decoration:none;font-weight:500;transition:color 0.3s;}
+        nav a:hover {color:#4db8ff;}
+        main {max-width:1200px;margin:2rem auto;padding:1rem;}
+        section {background-color: rgba(20,20,20,0.7);padding:2rem;margin-bottom:2rem;border-radius:12px;}
+        section h2 {margin-bottom:1rem;color:#4db8ff;}
+        .image-placeholder {width:100%;height:300px;background-color:#333;display:flex;align-items:center;justify-content:center;color:#888;font-size:1.2rem;border-radius:10px;margin-bottom:1rem;}
+        .info {font-size:1rem;}
+        table {width:100%;border-collapse:collapse;margin-top:1rem;}
+        table th, table td {padding:0.75rem;border:1px solid #555;text-align:left;}
+        table th {background-color:#222;}
+        table td {background-color:#111;}
+        footer {text-align:center;padding:1rem;background-color:rgba(0,0,0,0.6);font-size:0.9rem;color:#ccc;}
+        @media (max-width:768px){header h1{font-size:2rem;} section{padding:1rem;} .image-placeholder{height:200px;}}
+        .status {margin-top:1rem;font-weight:bold;color:#4db8ff;}
+        iframe {width:100%;height:300px;border:0;border-radius:10px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Al-Nex d.o.o.</h1>
+        <p>Građevinske usluge u Zenici <p class="status" id="open-status">Provjera statusa...</p></p>
+    </header>
+
+    <nav>
+        <a href="#o-nama">O nama</a>
+        <a href="#usluge">Usluge</a>
+        <a href="#radno-vrijeme">Radno vrijeme</a>
+        <a href="#lokacija">Lokacija</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <main>
+        <section id="o-nama">
+            <h2>O nama</h2>
+            <div class="image-placeholder">Slika: Logo firme ili ekipa na gradilištu</div>
+            <p class="info">Al-Nex d.o.o. je firma iz Zenice koja pruža kvalitetne građevinske usluge. Specijalizovani smo za izgradnju i renoviranje stambenih i poslovnih objekata.</p>
+        </section>
+
+        <section id="usluge">
+            <h2>Usluge</h2>
+            <div class="image-placeholder">Slika: Prikaz građevinskog projekta</div>
+            <p class="info">
+                - Izgradnja stambenih i poslovnih objekata<br>
+                - Renoviranje i adaptacije<br>
+                - Projektovanje i savjetovanje u građevinarstvu
+            </p>
+        </section>
+
+        <section id="radno-vrijeme">
+            <h2>Radno vrijeme</h2>
+            <table>
+                <tr><th>Dan</th><th>Vrijeme</th></tr>
+                <tr><td>Ponedjeljak</td><td>7:00 AM - 7:00 PM</td></tr>
+                <tr><td>Utorak</td><td>7:00 AM - 7:00 PM</td></tr>
+                <tr><td>Srijeda</td><td>7:00 AM - 7:00 PM</td></tr>
+                <tr><td>Četvrtak</td><td>7:00 AM - 7:00 PM</td></tr>
+                <tr><td>Petak</td><td>7:00 AM - 7:00 PM</td></tr>
+                <tr><td>Subota</td><td>7:00 AM - 7:00 PM</td></tr>
+                <tr><td>Nedjelja</td><td>Zatvoreno</td></tr>
+            </table>
+            <p class="status" id="open-status">Provjera statusa...</p>
+        </section>
+
+        <section id="lokacija">
+            <h2>Lokacija</h2>
+            <iframe src="https://www.google.com/maps?q=44.2016799906422,17.922725168047297&hl=bs&z=15&output=embed"></iframe>
+            <p class="info">Crkvice, Zenica, Bosna i Hercegovina, 72000</p>
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <div class="image-placeholder">Slika: Ikone društvenih mreža / Facebook</div>
+            <p class="info">
+                Telefon: <a href="tel:+38762510046" style="color:#4db8ff;">062 510 046</a><br>
+                Email: <a href="mailto:kagradnjazenica@gmail.com" style="color:#4db8ff;">kagradnjazenica@gmail.com</a><br>
+                Facebook: <a href="https://www.facebook.com/share/1CTVD8XTWY/" target="_blank" style="color:#4db8ff;">Klikni ovdje</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Al-Nex d.o.o. | Tarik Ganić
+    </footer>
+
+    <script>
+        // Otvoreno ili zatvoreno
+        function checkOpenStatus() {
+            const statusEl = document.getElementById('open-status');
+            const now = new Date();
+
+            // Zenica timezone offset (CET/CEST)
+            const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+            const zenicaOffset = 1; // UTC+1 standard
+            const isDST = (now.getMonth() > 2 && now.getMonth() < 9) || (now.getMonth() === 2 && now.getDate() - now.getDay() >= 25) || (now.getMonth() === 9 && now.getDate() - now.getDay() <= 25);
+            const offset = zenicaOffset + (isDST ? 1 : 0);
+            const localTime = new Date(utc + 3600000 * offset);
+
+            const day = localTime.getDay(); // 0=Sunday
+            const hour = localTime.getHours();
+
+            let open = false;
+
+            if(day >= 1 && day <= 6){ // Monday-Saturday
+                if(hour >=7 && hour <19) open = true;
+            }
+
+            statusEl.textContent = open ? "Otvoreno sada ✅" : "Zatvoreno sada ❌";
+        }
+
+        checkOpenStatus();
+        setInterval(checkOpenStatus, 60000); // update every minute
+    </script>
+</body>
+</html>
